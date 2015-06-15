@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmv-Mg-6YO">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="516"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5r-aB-FUd">
                                 <rect key="frame" x="269" y="550" width="63" height="30"/>
                                 <state key="normal" title="Favorites">
@@ -28,9 +25,15 @@
                                     <segue destination="mlJ-Ty-IWV" kind="show" id="4jF-Fv-UXK"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="I1W-v5-x7a">
+                                <rect key="frame" x="0.0" y="0.0" width="629" height="467"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="I1W-v5-x7a" id="HkI-nU-Wdn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,6 +42,7 @@
         <!--Favorite Controller-->
         <scene sceneID="TwS-ij-JOg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMJ-qw-14M" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mlJ-Ty-IWV" customClass="FavoriteController" customModule="Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oAM-KC-JJR"/>
@@ -55,7 +59,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HMJ-qw-14M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1128" y="452"/>
         </scene>
