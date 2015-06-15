@@ -12,14 +12,22 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet var mapView: MKMapView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let url = NSURL(string: "http://opendata.technolution.nl/opendata/parkingdata/v1")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+        }
+        
+        task.resume()
+        
         let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         centerMapOnLocation(initialLocation)
-        
     }
 
     override func didReceiveMemoryWarning() {
