@@ -14,6 +14,7 @@
 		A34F59C61B2EE1600023B396 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A34F59C51B2EE1600023B396 /* Images.xcassets */; };
 		A34F59C91B2EE1600023B396 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34F59C71B2EE1600023B396 /* LaunchScreen.xib */; };
 		A34F59D51B2EE1610023B396 /* FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59D41B2EE1610023B396 /* FinderTests.swift */; };
+		A34F59DF1B2EE1C90023B396 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34F59DE1B2EE1C90023B396 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A34F59CE1B2EE1610023B396 /* FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34F59D31B2EE1610023B396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34F59D41B2EE1610023B396 /* FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderTests.swift; sourceTree = "<group>"; };
+		A34F59DE1B2EE1C90023B396 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34F59DF1B2EE1C90023B396 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		A34F59AD1B2EE15F0023B396 = {
 			isa = PBXGroup;
 			children = (
+				A34F59DE1B2EE1C90023B396 /* MapKit.framework */,
 				A34F59B81B2EE1600023B396 /* Finder */,
 				A34F59D11B2EE1610023B396 /* FinderTests */,
 				A34F59B71B2EE1600023B396 /* Products */,
@@ -164,6 +168,11 @@
 				TargetAttributes = {
 					A34F59B51B2EE1600023B396 = {
 						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A34F59CD1B2EE1610023B396 = {
 						CreatedOnToolsVersion = 6.2;
