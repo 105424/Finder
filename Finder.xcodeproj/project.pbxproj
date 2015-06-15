@@ -15,6 +15,7 @@
 		A34F59C91B2EE1600023B396 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A34F59C71B2EE1600023B396 /* LaunchScreen.xib */; };
 		A34F59D51B2EE1610023B396 /* FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59D41B2EE1610023B396 /* FinderTests.swift */; };
 		A34F59DF1B2EE1C90023B396 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34F59DE1B2EE1C90023B396 /* MapKit.framework */; };
+		A34F59E11B2EE7990023B396 /* FavoriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59E01B2EE7990023B396 /* FavoriteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A34F59D31B2EE1610023B396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34F59D41B2EE1610023B396 /* FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderTests.swift; sourceTree = "<group>"; };
 		A34F59DE1B2EE1C90023B396 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A34F59E01B2EE7990023B396 /* FavoriteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A34F59BB1B2EE1600023B396 /* AppDelegate.swift */,
 				A34F59C01B2EE1600023B396 /* ViewController.swift */,
 				A34F59C21B2EE1600023B396 /* Main.storyboard */,
+				A34F59E01B2EE7990023B396 /* FavoriteController.swift */,
 				A34F59C51B2EE1600023B396 /* Images.xcassets */,
 				A34F59C71B2EE1600023B396 /* LaunchScreen.xib */,
 				A34F59BD1B2EE1600023B396 /* Finder.xcdatamodeld */,
@@ -227,6 +230,7 @@
 				A34F59C11B2EE1600023B396 /* ViewController.swift in Sources */,
 				A34F59BC1B2EE1600023B396 /* AppDelegate.swift in Sources */,
 				A34F59BF1B2EE1600023B396 /* Finder.xcdatamodeld in Sources */,
+				A34F59E11B2EE7990023B396 /* FavoriteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

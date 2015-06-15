@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="465" y="452"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Controller-->
         <scene sceneID="TwS-ij-JOg">
             <objects>
-                <viewController id="mlJ-Ty-IWV" sceneMemberID="viewController">
+                <viewController id="mlJ-Ty-IWV" customClass="FavoriteController" customModule="Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oAM-KC-JJR"/>
                         <viewControllerLayoutGuide type="bottom" id="9f5-S3-24O"/>
