@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
 
     @IBOutlet var mapView: MKMapView!
     var locationManager:CLLocationManager!
@@ -32,7 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             self.regionRadius = CLLocationDistance(defaults.integerForKey("mapSize"))
         }
         
-        
+        self.mapView.delegate = self
         
         let url = NSURL(string: "http://opendata.technolution.nl/opendata/parkingdata/v1")
         
@@ -123,7 +123,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             
         }
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -145,6 +145,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         mapView.addAnnotation(user)
         
+    }
+    
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if let annotation = annotation as? User {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+                as? MKPinAnnotationView {
+                    dequeuedView.annotation = annotation
+                    view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as UIView
+                view.pinColor = .Green
+            }
+            return view
+        }
+        return nil
     }
 }
 
