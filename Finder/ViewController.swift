@@ -29,13 +29,46 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         let url = NSURL(string: "http://opendata.technolution.nl/opendata/parkingdata/v1")
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            //println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            
+            println("got data")
+            
+            var dic = self.parseJSON(data);
+        
+            let garages = dic.valueForKey("parkingFacilities") as? NSArray
+            
+            for gar : AnyObject in garages! {
+                if let gar = gar as? NSDictionary {
+                    
+                    let title = gar.valueForKey("name") as? NSString
+                    
+                    let loc = gar.valueForKey("locationForDisplay") as? NSDictionary
+                    let lat = loc?.valueForKey("latitude") as? Double
+                    let long = loc?.valueForKey("longitude") as? Double
+    
+                    let limitedAcces = gar.valueForKey("limitedAccess") as? Bool
+                    
+                    var garage = Garage(
+                        title: title!,
+                        coordinate: CLLocationCoordinate2D(
+                            latitude: lat!,
+                            longitude: long!
+                        ),
+                        limitedAcces: limitedAcces!)
+                    
+                    self.mapView.addAnnotation(garage)
+                }
+            }
+            
         }
         
         task.resume()
+    }
+    
+    func parseJSON(inputData: NSData) -> NSDictionary{
+        var error: NSError?
+        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
         
-    //    let initialLocation = CLLocation(latitude: loc.coordinate.latitude, longitude: loc.coordinate.longitude)
-    //    centerMapOnLocation(initialLocation)
+        return boardsDictionary
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
@@ -51,7 +84,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         let loc =  locations.last as CLLocation
-        
         centerMapOnLocation(loc)
     }
     
@@ -90,13 +122,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     var firstFocus:Bool = true
-    let regionRadius: CLLocationDistance = 10000
+    let regionRadius: CLLocationDistance = 100000
     func centerMapOnLocation(location: CLLocation) {
         var coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
         
         if(firstFocus){
-            mapView.setRegion(coordinateRegion, animated: true)
+            mapView.setRegion(coordinateRegion, animated: false)
             firstFocus = false
         }
         

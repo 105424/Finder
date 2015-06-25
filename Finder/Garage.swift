@@ -11,20 +11,22 @@ import MapKit
 
 class Garage: NSObject, MKAnnotation {
     let title: String
-    let locationName: String
-    let discipline: String
     let coordinate: CLLocationCoordinate2D
+    let limitedAccess: Bool
     
-    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, coordinate: CLLocationCoordinate2D, limitedAcces: Bool) {
         self.title = title
-        self.locationName = locationName
-        self.discipline = discipline
         self.coordinate = coordinate
+        self.limitedAccess = limitedAcces
         
         super.init()
     }
     
     var subtitle: String {
-        return locationName
+        if(limitedAccess){
+            return "Gelimiteerde toegang"
+        }else{
+            return ""
+        }
     }
 }
