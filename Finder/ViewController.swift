@@ -14,8 +14,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
 
     @IBOutlet var mapView: MKMapView!
     var locationManager:CLLocationManager!
-    
     var seenError : Bool = false
+    var regionRadius: CLLocationDistance = 100000
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
+        
+        var defaults = NSUserDefaults.standardUserDefaults()
+        
+        if (defaults.objectForKey("mapSize") != nil) {
+            self.regionRadius = CLLocationDistance(defaults.integerForKey("mapSize"))
+        }
+        
+        
         
         let url = NSURL(string: "http://opendata.technolution.nl/opendata/parkingdata/v1")
         
@@ -122,7 +130,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     var firstFocus:Bool = true
-    let regionRadius: CLLocationDistance = 100000
     func centerMapOnLocation(location: CLLocation) {
         var coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
