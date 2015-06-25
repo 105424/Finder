@@ -11,6 +11,7 @@
 		5700F5E51B3C559900879DEF /* rotterdam.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5700F5E41B3C559900879DEF /* rotterdam.gpx */; };
 		5700F5E71B3C56D400879DEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700F5E61B3C56D400879DEF /* User.swift */; };
 		5700F5E91B3C56FF00879DEF /* Garage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700F5E81B3C56FF00879DEF /* Garage.swift */; };
+		57807A801B3C72D600DE177C /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57807A7F1B3C72D600DE177C /* SettingsController.swift */; };
 		A34F59BC1B2EE1600023B396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59BB1B2EE1600023B396 /* AppDelegate.swift */; };
 		A34F59BF1B2EE1600023B396 /* Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A34F59BD1B2EE1600023B396 /* Finder.xcdatamodeld */; };
 		A34F59C11B2EE1600023B396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59C01B2EE1600023B396 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		5700F5E41B3C559900879DEF /* rotterdam.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rotterdam.gpx; path = Finder/rotterdam.gpx; sourceTree = "<group>"; };
 		5700F5E61B3C56D400879DEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5700F5E81B3C56FF00879DEF /* Garage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Garage.swift; sourceTree = "<group>"; };
+		57807A7F1B3C72D600DE177C /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		A34F59B61B2EE1600023B396 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34F59BA1B2EE1600023B396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34F59BB1B2EE1600023B396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				A34F59B91B2EE1600023B396 /* Supporting Files */,
 				5700F5E61B3C56D400879DEF /* User.swift */,
 				5700F5E81B3C56FF00879DEF /* Garage.swift */,
+				57807A7F1B3C72D600DE177C /* SettingsController.swift */,
 			);
 			path = Finder;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				A34F59C11B2EE1600023B396 /* ViewController.swift in Sources */,
 				5700F5E71B3C56D400879DEF /* User.swift in Sources */,
 				A34F59BC1B2EE1600023B396 /* AppDelegate.swift in Sources */,
+				57807A801B3C72D600DE177C /* SettingsController.swift in Sources */,
 				A34F59BF1B2EE1600023B396 /* Finder.xcdatamodeld in Sources */,
 				A34F59E11B2EE7990023B396 /* FavoriteController.swift in Sources */,
 				5700F5E91B3C56FF00879DEF /* Garage.swift in Sources */,
