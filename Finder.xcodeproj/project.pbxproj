@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5700F5E11B3C437700879DEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5700F5E01B3C437700879DEF /* CoreLocation.framework */; };
+		5700F5E51B3C559900879DEF /* rotterdam.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5700F5E41B3C559900879DEF /* rotterdam.gpx */; };
+		5700F5E71B3C56D400879DEF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700F5E61B3C56D400879DEF /* User.swift */; };
+		5700F5E91B3C56FF00879DEF /* Garage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5700F5E81B3C56FF00879DEF /* Garage.swift */; };
 		A34F59BC1B2EE1600023B396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59BB1B2EE1600023B396 /* AppDelegate.swift */; };
 		A34F59BF1B2EE1600023B396 /* Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A34F59BD1B2EE1600023B396 /* Finder.xcdatamodeld */; };
 		A34F59C11B2EE1600023B396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F59C01B2EE1600023B396 /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5700F5E01B3C437700879DEF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5700F5E41B3C559900879DEF /* rotterdam.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rotterdam.gpx; path = Finder/rotterdam.gpx; sourceTree = "<group>"; };
+		5700F5E61B3C56D400879DEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5700F5E81B3C56FF00879DEF /* Garage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Garage.swift; sourceTree = "<group>"; };
 		A34F59B61B2EE1600023B396 /* Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34F59BA1B2EE1600023B396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34F59BB1B2EE1600023B396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5700F5E11B3C437700879DEF /* CoreLocation.framework in Frameworks */,
 				A34F59DF1B2EE1C90023B396 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +75,8 @@
 		A34F59AD1B2EE15F0023B396 = {
 			isa = PBXGroup;
 			children = (
+				5700F5E41B3C559900879DEF /* rotterdam.gpx */,
+				5700F5E01B3C437700879DEF /* CoreLocation.framework */,
 				A34F59DE1B2EE1C90023B396 /* MapKit.framework */,
 				A34F59B81B2EE1600023B396 /* Finder */,
 				A34F59D11B2EE1610023B396 /* FinderTests */,
@@ -93,6 +104,8 @@
 				A34F59C71B2EE1600023B396 /* LaunchScreen.xib */,
 				A34F59BD1B2EE1600023B396 /* Finder.xcdatamodeld */,
 				A34F59B91B2EE1600023B396 /* Supporting Files */,
+				5700F5E61B3C56D400879DEF /* User.swift */,
+				5700F5E81B3C56FF00879DEF /* Garage.swift */,
 			);
 			path = Finder;
 			sourceTree = "<group>";
@@ -207,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5700F5E51B3C559900879DEF /* rotterdam.gpx in Resources */,
 				A34F59C41B2EE1600023B396 /* Main.storyboard in Resources */,
 				A34F59C91B2EE1600023B396 /* LaunchScreen.xib in Resources */,
 				A34F59C61B2EE1600023B396 /* Images.xcassets in Resources */,
@@ -228,9 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34F59C11B2EE1600023B396 /* ViewController.swift in Sources */,
+				5700F5E71B3C56D400879DEF /* User.swift in Sources */,
 				A34F59BC1B2EE1600023B396 /* AppDelegate.swift in Sources */,
 				A34F59BF1B2EE1600023B396 /* Finder.xcdatamodeld in Sources */,
 				A34F59E11B2EE7990023B396 /* FavoriteController.swift in Sources */,
+				5700F5E91B3C56FF00879DEF /* Garage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Finder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -364,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Finder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,6 +440,7 @@
 				A34F59DA1B2EE1610023B396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A34F59DB1B2EE1610023B396 /* Build configuration list for PBXNativeTarget "FinderTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +449,7 @@
 				A34F59DD1B2EE1610023B396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
