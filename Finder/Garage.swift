@@ -22,6 +22,16 @@ class Garage: NSObject, MKAnnotation {
         super.init()
     }
     
+    var name: String{
+        return self.title
+    }
+    
+    var lat: Double{
+        return self.coordinate.latitude
+    }
+    var long: Double{
+        return self.coordinate.longitude
+    }
     var subtitle: String {
         if(limitedAccess){
             return "Gelimiteerde toegang"
